@@ -1,0 +1,28 @@
+﻿@model firstwebmvc.Models.classes.Bacarıqlar
+@{
+    ViewBag.Title = "Skill1";
+    Layout = "~/Views/Shared/Layoutnavbar.cshtml";
+}
+
+<form class="form-group" method="post">
+
+    <div style="margin-bottom:25px"> 
+        <label> Get a new skill</label>
+        @Html.TextBoxFor(x=>x.aciqlama, new
+   {
+       @class = "form-control"
+   })
+    </div>
+    <div style="margin-bottom:25px">
+        <label>Skill value</label>
+        @Html.TextBoxFor(x => x.deyer, new
+        {
+        @class = "form-control"
+        })
+    </div>
+    <button class="btn btn-primary">Save</button>
+
+
+
+</form>
+

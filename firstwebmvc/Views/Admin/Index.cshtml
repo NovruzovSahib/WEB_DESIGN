@@ -1,0 +1,28 @@
+﻿@using firstwebmvc.Models.classes;
+@model List<Bacarıqlar>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layoutnavbar.cshtml";
+}
+
+<table class=" table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>SKILL</th>
+        <th>VALUE</th>
+        <th>DELETE</th>
+        <th>UPDATE</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.aciqlama</td>
+            <td>@item.deyer</td>
+            <td><a href="/Admin/DeleteSkill/@item.Id" class=" btn btn-danger">delete</a></td>
+            <td><a href="/Admin/UpdateSkill/@item.Id" class=" btn btn-success">update</a></td>
+        </tr>
+    }
+
+
+</table>
